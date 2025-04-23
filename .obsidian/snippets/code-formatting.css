@@ -1,0 +1,258 @@
+/* LifeOS 代码块美化 */
+
+/* 代码块基本样式 */
+.markdown-rendered pre {
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em 0;
+  overflow: auto;
+  position: relative;
+  background-color: var(--code-background);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* 代码块标题 */
+.markdown-rendered pre[class*="language-"]:before {
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.2em 0.6em;
+  font-size: 0.8em;
+  background: var(--background-secondary);
+  color: var(--text-muted);
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 7px;
+  border-left: 1px solid var(--background-modifier-border);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/* 内联代码样式 */
+.markdown-rendered code:not([class*="language-"]) {
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+}
+
+/* 代码块行号 */
+.markdown-rendered pre.has-line-numbers .line-numbers {
+  border-right: 1px solid var(--background-modifier-border);
+  padding-right: 0.8em;
+  margin-right: 0.8em;
+  color: var(--text-muted);
+  opacity: 0.6;
+  user-select: none;
+}
+
+/* 不同语言的语法高亮 */
+
+/* JavaScript/TypeScript */
+.markdown-rendered pre[class*="language-javascript"] code,
+.markdown-rendered pre[class*="language-js"] code,
+.markdown-rendered pre[class*="language-typescript"] code,
+.markdown-rendered pre[class*="language-ts"] code {
+  color: #c5c8c6;
+}
+
+.markdown-rendered pre[class*="language-javascript"] .token.keyword,
+.markdown-rendered pre[class*="language-js"] .token.keyword,
+.markdown-rendered pre[class*="language-typescript"] .token.keyword,
+.markdown-rendered pre[class*="language-ts"] .token.keyword {
+  color: #cc99cd;
+}
+
+.markdown-rendered pre[class*="language-javascript"] .token.string,
+.markdown-rendered pre[class*="language-js"] .token.string,
+.markdown-rendered pre[class*="language-typescript"] .token.string,
+.markdown-rendered pre[class*="language-ts"] .token.string {
+  color: #a8c76a;
+}
+
+.markdown-rendered pre[class*="language-javascript"] .token.number,
+.markdown-rendered pre[class*="language-js"] .token.number,
+.markdown-rendered pre[class*="language-typescript"] .token.number,
+.markdown-rendered pre[class*="language-ts"] .token.number {
+  color: #f08d49;
+}
+
+.markdown-rendered pre[class*="language-javascript"] .token.comment,
+.markdown-rendered pre[class*="language-js"] .token.comment,
+.markdown-rendered pre[class*="language-typescript"] .token.comment,
+.markdown-rendered pre[class*="language-ts"] .token.comment {
+  color: #7c7c7c;
+  font-style: italic;
+}
+
+.markdown-rendered pre[class*="language-javascript"] .token.function,
+.markdown-rendered pre[class*="language-js"] .token.function,
+.markdown-rendered pre[class*="language-typescript"] .token.function,
+.markdown-rendered pre[class*="language-ts"] .token.function {
+  color: #7ec699;
+}
+
+/* Python */
+.markdown-rendered pre[class*="language-python"] code,
+.markdown-rendered pre[class*="language-py"] code {
+  color: #c5c8c6;
+}
+
+.markdown-rendered pre[class*="language-python"] .token.keyword,
+.markdown-rendered pre[class*="language-py"] .token.keyword {
+  color: #6c95eb;
+}
+
+.markdown-rendered pre[class*="language-python"] .token.string,
+.markdown-rendered pre[class*="language-py"] .token.string {
+  color: #a8c76a;
+}
+
+.markdown-rendered pre[class*="language-python"] .token.number,
+.markdown-rendered pre[class*="language-py"] .token.number {
+  color: #f08d49;
+}
+
+.markdown-rendered pre[class*="language-python"] .token.comment,
+.markdown-rendered pre[class*="language-py"] .token.comment {
+  color: #7c7c7c;
+  font-style: italic;
+}
+
+.markdown-rendered pre[class*="language-python"] .token.function,
+.markdown-rendered pre[class*="language-py"] .token.function {
+  color: #e2b93d;
+}
+
+/* CSS/SCSS */
+.markdown-rendered pre[class*="language-css"] code,
+.markdown-rendered pre[class*="language-scss"] code {
+  color: #c5c8c6;
+}
+
+.markdown-rendered pre[class*="language-css"] .token.property,
+.markdown-rendered pre[class*="language-scss"] .token.property {
+  color: #e06c75;
+}
+
+.markdown-rendered pre[class*="language-css"] .token.selector,
+.markdown-rendered pre[class*="language-scss"] .token.selector {
+  color: #d19a66;
+}
+
+.markdown-rendered pre[class*="language-css"] .token.value,
+.markdown-rendered pre[class*="language-scss"] .token.value {
+  color: #98c379;
+}
+
+/* JSON */
+.markdown-rendered pre[class*="language-json"] .token.property {
+  color: #e06c75;
+}
+
+.markdown-rendered pre[class*="language-json"] .token.string {
+  color: #98c379;
+}
+
+.markdown-rendered pre[class*="language-json"] .token.number {
+  color: #d19a66;
+}
+
+/* Markdown */
+.markdown-rendered pre[class*="language-markdown"] .token.heading {
+  color: #e06c75;
+  font-weight: bold;
+}
+
+.markdown-rendered pre[class*="language-markdown"] .token.list {
+  color: #d19a66;
+}
+
+.markdown-rendered pre[class*="language-markdown"] .token.url {
+  color: #56b6c2;
+}
+
+/* HTML */
+.markdown-rendered pre[class*="language-html"] .token.tag {
+  color: #e06c75;
+}
+
+.markdown-rendered pre[class*="language-html"] .token.attr-name {
+  color: #d19a66;
+}
+
+.markdown-rendered pre[class*="language-html"] .token.attr-value {
+  color: #98c379;
+}
+
+/* 代码块复制按钮 */
+.markdown-rendered pre .copy-code-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.3em;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  border: 1px solid var(--background-modifier-border);
+  background-color: var(--background-secondary);
+  color: var(--text-muted);
+  font-size: 0.8em;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.markdown-rendered pre:hover .copy-code-button {
+  opacity: 1;
+}
+
+.markdown-rendered pre .copy-code-button:hover {
+  background-color: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+/* 代码块折叠/展开 */
+.markdown-rendered pre.is-collapsed {
+  max-height: 12em;
+  overflow: hidden;
+}
+
+.markdown-rendered pre.is-collapsed:after {
+  content: "点击展开";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, transparent, var(--code-background));
+  padding: 0.6em;
+  text-align: center;
+  color: var(--text-accent);
+  cursor: pointer;
+}
+
+/* 任务代码块特殊样式 */
+.markdown-rendered pre[class*="language-tasks"] {
+  background-color: rgba(var(--color-accent-rgb), 0.05);
+  border-left: 3px solid var(--color-accent);
+}
+
+/* dataview代码块特殊样式 */
+.markdown-rendered pre[class*="language-dataview"] {
+  background-color: rgba(var(--color-purple-rgb), 0.05);
+  border-left: 3px solid var(--color-purple);
+}
+
+/* 行高亮 */
+.markdown-rendered pre .highlight-line {
+  background-color: rgba(var(--color-accent-rgb), 0.1);
+  display: block;
+  margin: 0 -1em;
+  padding: 0 1em;
+}
+
+/* 搜索高亮 */
+.markdown-rendered pre .search-highlight {
+  background-color: rgba(255, 255, 0, 0.2);
+  color: #000;
+  font-weight: bold;
+} 

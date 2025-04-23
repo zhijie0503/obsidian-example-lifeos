@@ -1,0 +1,26 @@
+{
+  "components": {
+    "InputList": {
+      "type": "list",
+      "query": "dataview: LIST WHERE contains(file.folder, \"0. PeriodicNotes\") OR contains(file.folder, \"-1. Capture\") OR contains(file.tags, \"#收集\") OR contains(file.tags, \"#想法\") OR contains(file.tags, \"#资源\") SORT file.mtime DESC LIMIT 20",
+      "template": "<li><a href=\"{{file.path}}\">{{file.name}}</a> - {{date(file.mtime, \"YYYY-MM-DD\")}}</li>"
+    },
+    "ProjectList": {
+      "type": "list",
+      "query": "dataview: LIST WHERE contains(file.folder, \"1. Projects\") OR contains(file.tags, \"#项目\") SORT file.mtime DESC LIMIT 20",
+      "template": "<li><a href=\"{{file.path}}\">{{file.name}}</a></li>"
+    },
+    "TaskList": {
+      "type": "list",
+      "query": "tasks: not done",
+      "template": "<li>{{task.text}} <span class=\"task-meta\">{{#task.due}}@{{task.due}}{{/task.due}}</span></li>",
+      "sort": "due",
+      "limit": 20
+    },
+    "OutputList": {
+      "type": "list",
+      "query": "dataview: LIST WHERE contains(file.tags, \"#完成\") OR contains(file.tags, \"#成果\") OR contains(file.tags, \"#输出\") SORT file.mtime DESC LIMIT 20",
+      "template": "<li><a href=\"{{file.path}}\">{{file.name}}</a> ✅ {{date(file.mtime, \"YYYY-MM-DD\")}}</li>"
+    }
+  }
+} 

@@ -1,3 +1,5 @@
+# LifeOS for Obsidian
+
 <p align="center"><a title="中文版本" href="https://github.com/quanru/obsidian-example-lifeos/tree/chinese-version">中文版本</a>  |  English Version</p>
 
 <a href="https://obsidian.md/blog/2024-goty-winners/">🔥 LifeOS for Obsidian won the third place 🥉 in the Best Templates category at the 2024 Obsidian Gems of the Year awards!</a>
@@ -6,7 +8,7 @@
   <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=441390&theme=light" alt="LifeOS&#0032;Template&#0032;for&#0032;Obsidian - Obsidian&#0032;LifeOS&#0032;&#0045;&#0032;Your&#0032;Life&#0032;Management&#0032;Assistant&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
 </a>
 
-- This is a plugin for [LifeOS](https://lifeos.vip), which assist in practicing the PARA method with periodic notes and [usememos](https://www.usememos.com/).
+- This is a plugin for [LifeOS](https://lifeos.vip), which assist in practicing the PARA method with periodic notes, theme notes and [usememos](https://www.usememos.com/).
 - It is recommended to download the [LifeOS-example](https://github.com/quanru/obsidian-example-lifeos/archive/refs/heads/main.zip) to experience it.
 - For more tutorials, please go to [LifeOS for Obsidian Official Site](https://lifeos.vip/)
 
@@ -15,6 +17,17 @@
 - Basic: https://lifeos.vip/guide/readme/free.html
 - **Pro** : https://lifeos.vip/guide/readme/pro.html
 
+### Core Features
+
+- **Periodic Notes**: Track and manage your daily, weekly, monthly, quarterly and yearly notes
+- **Theme Notes**: Organize your life and work by themes, each with a unique ID
+- **Task Management**: Create and manage tasks in notes, home page, advanced lists, and calendar
+- **Calendar Planning**: Plan your schedule with calendar view and subscribe to external calendars
+- **Advanced Lists**: Manage theme-related tasks, flashes, and files with structured lists
+- **Convenient Features**: Time stamps, right-click tag creation, folder jumping, and more
+- **Code Block Styling**: Beautiful code formatting with syntax highlighting, line numbers, and more
+
+For detailed documentation, please check the [docs](/docs) directory.
 
 ## Download
 

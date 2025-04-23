@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"type":"text","text":"## 📥 输入\n> 收集各种笔记、想法和资源\n```LifeOS\nInputList\n```","id":"input-section","x":-960,"y":-360,"width":380,"height":720,"color":"1"},
+		{"type":"text","text":"## 🔥 项目\n> 需要处理的任务和项目\n```LifeOS\nProjectList\n```","id":"project-section","x":-520,"y":-360,"width":380,"height":720,"color":"4"},
+		{"type":"text","text":"## ✅ 任务\n> 当前和计划中的任务\n```LifeOS\nTaskList\n```","id":"task-section","x":-80,"y":-360,"width":380,"height":720,"color":"5"},
+		{"type":"text","text":"## 📤 输出\n> 完成的项目和成果\n```LifeOS\nOutputList\n```","id":"output-section","x":360,"y":-360,"width":380,"height":720,"color":"3"}
+	],
+	"edges":[]
+} 

@@ -1,0 +1,75 @@
+/* LifeOS任务截止日期设置功能的样式 */
+
+.lifeos-date-picker-container {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.lifeos-date-picker {
+  background-color: var(--background-primary);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.lifeos-date-confirm {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.lifeos-date-confirm:hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+/* 任务截止日期高亮样式 */
+.task-due-date {
+  font-family: var(--font-monospace);
+  color: var(--text-accent);
+  background-color: rgba(var(--interactive-accent-rgb), 0.1);
+  border-radius: 3px;
+  padding: 0 5px;
+  margin-left: 5px;
+  font-size: 0.9em;
+}
+
+/* 即将到期的任务样式（3天内） */
+.task-due-soon {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+/* 已过期任务样式 */
+.task-due-overdue {
+  color: #f44336;
+  font-weight: bold;
+}
+
+/* 任务列表中的日期样式 */
+.task-list-item[data-task-due] {
+  position: relative;
+}
+
+.task-list-item[data-task-due]::after {
+  content: attr(data-task-due);
+  font-size: 0.85em;
+  color: var(--text-muted);
+  position: absolute;
+  right: 0;
+  top: 0;
+} 

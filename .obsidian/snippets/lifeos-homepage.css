@@ -1,0 +1,120 @@
+/* LifeOS主页视图样式 */
+
+/* Canvas基本样式 */
+.canvas-node-container .markdown-rendered {
+  font-family: var(--font-text);
+  line-height: 1.5;
+}
+
+/* 标题样式 */
+.canvas-node-container .markdown-rendered h2 {
+  margin-top: 0;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 5px;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+/* 列表项样式 */
+.canvas-node-container .markdown-rendered ul {
+  padding-left: 15px;
+}
+
+.canvas-node-container .markdown-rendered li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+  list-style-type: none;
+  position: relative;
+  padding-left: 18px;
+}
+
+.canvas-node-container .markdown-rendered li:before {
+  content: '•';
+  color: var(--color-accent);
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+}
+
+/* 链接样式 */
+.canvas-node-container .markdown-rendered a {
+  color: var(--text-normal);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--color-accent-2);
+  transition: all 0.2s ease;
+}
+
+.canvas-node-container .markdown-rendered a:hover {
+  color: var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
+}
+
+/* 日期样式 */
+.canvas-node-container .markdown-rendered .task-meta,
+.canvas-node-container .markdown-rendered .date {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-left: 5px;
+}
+
+/* 列颜色 */
+.canvas-node-content[data-color="1"] {
+  background-color: rgba(255, 200, 200, 0.15); /* 输入-淡红色 */
+}
+
+.canvas-node-content[data-color="4"] {
+  background-color: rgba(200, 200, 255, 0.15); /* 项目-淡蓝色 */
+}
+
+.canvas-node-content[data-color="5"] {
+  background-color: rgba(200, 255, 200, 0.15); /* 任务-淡绿色 */
+}
+
+.canvas-node-content[data-color="3"] {
+  background-color: rgba(255, 255, 200, 0.15); /* 输出-淡黄色 */
+}
+
+/* 完成标记样式 */
+.canvas-node-container .markdown-rendered li:has(a[href*="#完成"]):before,
+.canvas-node-container .markdown-rendered li:has(span:contains("✅")):before {
+  content: '✓';
+  color: #5cb85c;
+}
+
+/* 描述文本样式 */
+.canvas-node-container .markdown-rendered blockquote {
+  border-left: 3px solid var(--color-accent);
+  margin: 0 0 15px 0;
+  padding: 5px 15px;
+  background-color: rgba(var(--color-accent-rgb), 0.05);
+  font-style: italic;
+}
+
+/* 列表容器样式 */
+.canvas-node-container .markdown-rendered .list-container {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* 滚动条样式 */
+.canvas-node-container .markdown-rendered .list-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.canvas-node-container .markdown-rendered .list-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent);
+  border-radius: 3px;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+  .canvas-node-container .markdown-rendered h2 {
+    font-size: 1.2em;
+  }
+  
+  .canvas-node-container .markdown-rendered li {
+    font-size: 0.9em;
+  }
+} 

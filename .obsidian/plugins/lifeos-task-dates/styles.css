@@ -1,0 +1,80 @@
+/* 日期选择器容器 */
+.lifeos-date-picker-container {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 日期选择器输入框 */
+.lifeos-date-picker {
+  background-color: var(--background-secondary);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.lifeos-date-picker:focus {
+  border-color: var(--interactive-accent);
+}
+
+/* 确认按钮 */
+.lifeos-date-confirm {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.lifeos-date-confirm:hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+/* 任务截止日期样式 */
+.task-due-date {
+  display: inline-block;
+  font-size: 0.85em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 6px;
+  background-color: var(--background-secondary);
+  color: var(--text-muted);
+}
+
+/* 即将到期任务 (3天内) */
+.task-due-soon {
+  background-color: #fdedd2;
+  color: #d58b0f;
+  font-weight: 500;
+}
+
+/* 已过期任务 */
+.task-due-overdue {
+  background-color: #fbe4e4;
+  color: #c82829;
+  font-weight: 500;
+}
+
+/* 任务列表中的截止日期显示 */
+.markdown-preview-view ul li[data-task] .task-due-date,
+.markdown-source-view.mod-cm6 .HyperMD-task-line .task-due-date {
+  vertical-align: middle;
+}
+
+/* 在编辑器中突出显示截止日期标记 */
+.cm-s-obsidian .cm-task-due-date {
+  color: var(--text-accent);
+  font-style: italic;
+} 
